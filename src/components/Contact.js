@@ -33,8 +33,7 @@ const Contact = () => {
     <section id="contact" className="contact">
       <h2>Contact Me</h2>
       <p>
-        Email: pramod@gmail.com &nbsp; | | &nbsp; Phone: +91 ----------
-        &nbsp; | | &nbsp; LinkedIn: linkedin.com/in/pramod
+        Email: deokarpd115@gmail.com &nbsp; 
       </p>
       <h4>
         Let’s Communicate!<br></br> Share your details, I’ll contact you. 👇
