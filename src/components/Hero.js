@@ -13,7 +13,7 @@ function Hero() {
             With expertise in React.js, Node.js, Express.js, and MongoDB, I turn ideas into impactful digital solutions.</p>
         <a href="/Pramod.pdf" download className="btn">📝 Download Resume</a>
       </div>
-      <img src="images/hero-image.jpg" alt="Hero" className="hero-image" />
+      <img src="/images/hero-image.jpg" alt="Hero" className="hero-image" />
     </section>
   );
 }
