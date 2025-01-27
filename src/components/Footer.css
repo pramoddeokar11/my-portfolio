@@ -1,0 +1,21 @@
+/* Footer.css */
+
+.footer {
+  background-color: #222; /* Dark background */
+  color: #fff; /* Light text */
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.footer p:hover {
+  color: #007BFF; /* Subtle hover effect on text */
+  cursor: default;
+}

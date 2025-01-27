@@ -1,0 +1,60 @@
+/* About.css */
+
+.about {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Subtle gradient background */
+  background: linear-gradient(to right, #93d3e1, #edc3eb);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff; /* White card-like container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 30px;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-content p strong {
+  color: #007BFF; /* Highlight important text in blue */
+}
+
+.about-content p a {
+  color: #007BFF; /* Links in blue */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-content p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: 20px;
+  }
+
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,68 @@
+/* Testimonials.css */
+
+.testimonials {
+  background-color: #f9f9f9; /* Light background for the testimonials section */
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  background: linear-gradient(to right, #93d3e1, #edc3eb);
+  padding: 100px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 30px;
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px); /* Slight hover effect */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.testimonial-card p {
+  font-size: 1.2rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+@media (max-width: 768px) {
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center; /* Stack the cards vertically on small screens */
+  }
+
+  .testimonial-card {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+}

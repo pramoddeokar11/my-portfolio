@@ -1,0 +1,90 @@
+/* Hero.css */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background: linear-gradient(to right, #93d3e1, #edc3eb); /* Soft pastel blue to lavender gradient */
+  color: #2e2e2e; /* Dark text color for good contrast */
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #1c1c1c; /* Rich dark color for headings */
+}
+
+.hero-content h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #1c1c1c; /* Dark color for subheading */
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #444; /* Slightly lighter gray text for the paragraph */
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  font-size: 1.2rem;
+  background-color: #56c6df; /* Soft blue button */
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background-color: #6f85c1; /* Slightly darker blue on hover */
+  transform: scale(1.05);
+}
+
+.hero-image {
+  width: 40%; /* Adjusted width for a smaller image */
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 70%; /* Smaller image on mobile screens */
+    margin-top: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content .btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+}

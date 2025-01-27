@@ -1,0 +1,92 @@
+/* General styles for the Education section */
+.education {
+    padding: 60px 20px;
+    background-color: #f5f7fa; /* Light background for a clean look */
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background: linear-gradient(to right, #93d3e1, #edc3eb);
+    color: #333; /* Dark text for contrast */
+    
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #0e0f0f; /* Slightly darker shade for the title */
+    letter-spacing: 1.5px;
+    padding-bottom: 5px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Container for the education items */
+  .education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+  }
+  
+  /* Individual education item */
+  .education-item {
+    background-color: #ffffff; /* White card background */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for education item */
+  .education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Degree text styles */
+  .degree {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #d489d5; /* Subtle contrast */
+    margin-bottom: 8px;
+  }
+  
+  /* Institution text styles */
+  .institution {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #7f8c8d; /* Light grey for institution name */
+    margin-bottom: 6px;
+  }
+  
+  /* Year text styles */
+  .year {
+    font-size: 0.9rem;
+    color: #95a5a6; /* Muted grey for year */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .education-container {
+      gap: 20px;
+    }
+  
+    .education-item {
+      padding: 15px 20px;
+    }
+  
+    .degree {
+      font-size: 1.1rem;
+    }
+  
+    .institution {
+      font-size: 0.95rem;
+    }
+  
+    .year {
+      font-size: 0.85rem;
+    }
+  }
+  
