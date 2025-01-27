@@ -33,7 +33,7 @@ const Contact = () => {
     <section id="contact" className="contact">
       <h2>Contact Me</h2>
       <p>
-        Email: pramoddeokar115@gmail.com &nbsp; | | &nbsp; Phone: +91 ----------
+        Email: pramod@gmail.com &nbsp; | | &nbsp; Phone: +91 ----------
         &nbsp; | | &nbsp; LinkedIn: linkedin.com/in/pramod
       </p>
       <h4>
