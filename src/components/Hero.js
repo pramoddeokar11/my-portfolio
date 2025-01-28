@@ -13,7 +13,7 @@ function Hero() {
           I specialize in building modern, responsive, and scalable web applications from scratch.
           With expertise in React.js, Node.js, Express.js, and MongoDB, I turn ideas into impactful digital solutions.
         </p>
-        <a href="/assets/Pramod.pdf" download className="btn">📝 Download Resume</a>
+        <a href="/Pramod.pdf" download="Pramod.pdf" className="btn">📝 Download Resume</a>
       </div>
       <img src={heroImage} alt="Hero" className="hero-image" />
     </section>
