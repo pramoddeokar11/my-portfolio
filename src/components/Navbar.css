@@ -1,8 +1,6 @@
-/* Navbar.css */
-
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between logo & hamburger */
   align-items: center;
   background-color: #cce7ef;
   padding: 0px 40px;
@@ -13,14 +11,17 @@
   z-index: 1000;
 }
 
+/* Style for the logo */
 .navbar .logo {
   font-size: 1.8rem;
   font-weight: bold;
   color: #744a7d;
   text-transform: uppercase;
   font-style: italic;
+  margin-right: auto; /* Push the hamburger to the right */
 }
 
+/* Nav links styling */
 .nav-links {
   display: flex;
   list-style: none;
@@ -42,12 +43,13 @@
   color: #18bf12; /* Green color on hover */
 }
 
-/* Hamburger menu for mobile */
+/* Hamburger menu - aligned to the right */
 .hamburger {
-  display: none;
-  cursor: pointer;
+  display: flex;
   flex-direction: column;
   gap: 5px;
+  cursor: pointer;
+  margin-left: auto; /* Push to right */
 }
 
 .hamburger .bar {
@@ -57,12 +59,10 @@
   border-radius: 5px;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design */
 @media (max-width: 768px) {
   .navbar {
     padding: 20px;
-    flex-direction: column;
-    text-align: center;
   }
 
   .nav-links {
@@ -85,7 +85,6 @@
     font-size: 1.2rem;
   }
 
-  /* Show hamburger menu for mobile screens */
   .hamburger {
     display: flex;
   }
