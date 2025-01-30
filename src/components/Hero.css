@@ -1,90 +1,134 @@
-/* Hero.css */
-
+/* Hero Section Styling */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;
-  background: linear-gradient(to right, #93d3e1, #edc3eb); /* Soft pastel blue to lavender gradient */
-  color: #2e2e2e; /* Dark text color for good contrast */
-  font-family: 'Arial', sans-serif;
-  height: 100vh;
+  padding: 80px 50px;
+  background-color: #0077B5; /* LinkedIn Blue */
+  color: #fff; /* White text for contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+  height: 80vh;
+  position: relative; /* For positioning elements */
+  z-index: 0;
 }
 
+/* Content Section */
 .hero-content {
-  max-width: 600px;
-}
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #1c1c1c; /* Rich dark color for headings */
+  max-width: 700px;
+  z-index: 1; /* Ensure content appears above the background */
+  text-align: left; /* Align text left for a professional feel */
 }
 
 .hero-content h3 {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 10px;
-  color: #1c1c1c; /* Dark color for subheading */
+  color: #fff; /* White color for the intro text */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Adds subtle depth */
+  padding-left: 10%;
+}
+
+.hero-content h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2); /* Dynamic shadow for depth */
+  padding-left: 10%;
 }
 
 .hero-content p {
-  font-size: 1.1rem;
-  color: #444; /* Slightly lighter gray text for the paragraph */
-  line-height: 1.6;
-  margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: #f1f1f1; /* Lighter text color for readability */
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 500px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  padding-left: 10%;
 }
 
+/* Button Styling */
 .hero-content .btn {
   font-size: 1.2rem;
-  background-color: #56c6df; /* Soft blue button */
+  background-color: #00A0DC; /* Secondary LinkedIn Blue */
   padding: 15px 30px;
   color: #fff;
   text-decoration: none;
   border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block; /* Ensures the button is inline with text */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin-left: 15%;
 }
 
 .hero-content .btn:hover {
-  background-color: #6f85c1; /* Slightly darker blue on hover */
-  transform: scale(1.05);
+  background-color: #0077B5; /* Change to primary LinkedIn Blue on hover */
+  transform: scale(1.05); /* Slight scale-up effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect on hover */
 }
 
+/* Image Styling */
 .hero-image {
-  width: 40%; /* Adjusted width for a smaller image */
-  object-fit: cover;
-  border-radius: 15px;
+  width: 40%;
+  height: auto;
+  object-fit: cover; /* Ensures the image fits the container without distortion */
+  border-radius: 50%;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border: 5px solid #fff; /* White border for contrast */
+  transition: transform 0.3s ease-in-out;
 }
 
+.hero-image:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Mobile Styling */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center the items */
     text-align: center;
+    padding: 40px 20px; /* Reduced padding for mobile */
+    height: auto; /* Remove fixed height for flexible layout */
   }
 
+  /* Place the image at the top in mobile view */
   .hero-image {
-    width: 70%; /* Smaller image on mobile screens */
-    margin-top: 20px;
+    width: 200px; /* Set width for mobile */
+    height: 200px; /* Equal height for perfect roundness */
+    margin-top: 50px; /* Remove any top margin */
+    margin-bottom: 15px; /* Space between image and content */
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover; /* Ensure the image fits within the circle */
+
+    position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   }
 
-  .hero-content h1 {
-    font-size: 2.8rem;
+  .hero-content h2 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
   }
 
   .hero-content h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    margin-top: 45%;
+    margin-left: 10%;
   }
 
   .hero-content p {
     font-size: 1rem;
+    max-width: 90%;
+    margin-bottom: 40px;
   }
 
   .hero-content .btn {
     padding: 12px 25px;
     font-size: 1.1rem;
+    margin-left: 28%; 
   }
 }

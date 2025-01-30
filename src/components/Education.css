@@ -1,92 +1,106 @@
 /* General styles for the Education section */
 .education {
-    padding: 60px 20px;
-    background-color: #f5f7fa; /* Light background for a clean look */
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    background: linear-gradient(to right, #93d3e1, #edc3eb);
-    color: #333; /* Dark text for contrast */
-    
-  }
-  
-  .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 40px;
-    color: #0e0f0f; /* Slightly darker shade for the title */
-    letter-spacing: 1.5px;
-    padding-bottom: 5px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Container for the education items */
+  padding: 45px 20px;
+  background-color: #0077B5; /* LinkedIn Blue */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff; /* White text for contrast */
+  text-align: center; /* Center text for a modern look */
+}
+
+.education h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4); /* Deep shadow for dramatic effect */
+  position: relative;
+  z-index: 2;
+}
+
+/* Section title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #fff; /* White title for contrast */
+  letter-spacing: 1.5px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container for the education items */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Individual education item */
+.education-item {
+  padding: 15px;
+  width: 100%;
+  color: #fff; /* White text for readability */
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  border-left: 4px solid #fff; /* Adding a left border for distinction */
+  margin-left: 20px; /* Indentation from the left */
+  background-color: transparent; /* No background box */
+  text-align: left; /* Align text to the left */
+}
+
+/* Hover effect for education item */
+.education-item:hover {
+  transform: translateY(-5px);
+  color: #f1f1f1; /* Lighter text color on hover */
+}
+
+/* Degree text styles */
+.degree {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; /* LinkedIn Blue */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Institution text styles */
+.institution {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e0e0e0; /* Light grey for institution name */
+  margin-bottom: 8px;
+}
+
+/* Year text styles */
+.year {
+  font-size: 1rem;
+  color: #b0b0b0; /* Muted grey for year */
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
   .education-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto; /* Center the container */
-  }
-  
-  /* Individual education item */
-  .education-item {
-    background-color: #ffffff; /* White card background */
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    width: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* Hover effect for education item */
-  .education-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  }
-  
-  /* Degree text styles */
-  .degree {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #d489d5; /* Subtle contrast */
-    margin-bottom: 8px;
-  }
-  
-  /* Institution text styles */
-  .institution {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #7f8c8d; /* Light grey for institution name */
-    margin-bottom: 6px;
-  }
-  
-  /* Year text styles */
-  .year {
-    font-size: 0.9rem;
-    color: #95a5a6; /* Muted grey for year */
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .education-container {
       gap: 20px;
-    }
-  
-    .education-item {
-      padding: 15px 20px;
-    }
-  
-    .degree {
-      font-size: 1.1rem;
-    }
-  
-    .institution {
-      font-size: 0.95rem;
-    }
-  
-    .year {
-      font-size: 0.85rem;
-    }
   }
-  
+
+  .education-item {
+      padding: 12px;
+  }
+
+  .degree {
+      font-size: 1.3rem;
+  }
+
+  .institution {
+      font-size: 1rem;
+  }
+
+  .year {
+      font-size: 0.9rem;
+  }
+}

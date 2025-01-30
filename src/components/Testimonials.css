@@ -1,56 +1,93 @@
-/* Testimonials.css */
-
+/* Testimonials Section */
 .testimonials {
-  background-color: #f9f9f9; /* Light background for the testimonials section */
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  background: linear-gradient(to right, #93d3e1, #edc3eb);
-  padding: 100px 20px;
+  background: #0077b5; /* LinkedIn-like gradient background */
+  padding: 40px 20px;
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Section Title */
 .testimonials h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  color: #222;
-  margin-bottom: 40px;
+  color: #fff;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4); /* Deep shadow for dramatic effect */
+  position: relative;
+  z-index: 2;
 }
 
+/* Container for the testimonial items */
 .testimonial-cards {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   margin-top: 20px;
+  position: relative;
+  z-index: 1;
 }
 
+/* Individual Testimonial Item - Removing background boxes */
 .testimonial-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background: transparent; /* No background box */
   padding: 30px;
   width: 30%;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+  color: #fff; /* White text for contrast */
+  font-style: italic;
+  box-shadow: none; /* Removing the shadow for a cleaner look */
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(8px); /* Optional, creates a blurred effect if needed */
+  border-top: 4px solid #00A0DC; /* LinkedIn Blue line at the top */
+  border-bottom: 4px solid #00A0DC; /* LinkedIn Blue line at the bottom */
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
+/* Hover effect to create emphasis */
 .testimonial-card:hover {
-  transform: translateY(-10px); /* Slight hover effect */
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-15px); /* Slight hover effect */
 }
 
+/* Text styling within testimonial cards */
 .testimonial-card p {
   font-size: 1.2rem;
-  color: #555;
+  color: #dfe6e9; /* Light grey for testimonial text */
   font-style: italic;
   margin-bottom: 20px;
+  z-index: 2;
 }
 
 .testimonial-card h4 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #222;
+  color: #fff;
+  margin-top: 10px;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
 }
 
+/* Underline Effect on Hover for the Name */
+.testimonial-card:hover h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #00A0DC; /* LinkedIn Blue */
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .testimonial-cards {
     flex-direction: column;
@@ -63,6 +100,6 @@
   }
 
   .testimonials h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }

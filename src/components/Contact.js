@@ -31,12 +31,14 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact">
-      <h2>Contact Me</h2>
-      <p>
-        Email: deokarpd115@gmail.com &nbsp; 
+      <h2>Contact Info</h2>
+      <p> 
+         ✉️ Email : deokarpd115@gmail.com <br></br>
+         📞 Phone : +91 8459163649 
       </p>
+     
       <h4>
-        Let’s Communicate!<br></br> Share your details, I’ll contact you. 👇
+        Get in Touch 👇
       </h4>
       <form ref={form} onSubmit={sendEmail}>
         <input type="text" name="name" placeholder="Your Name" required />

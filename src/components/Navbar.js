@@ -1,30 +1,40 @@
-import React, { useState } from 'react';
-import './Navbar.css';
+import React, { useState } from "react";
+import "./Navbar.css";
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMobile(!isMobile);
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMenuOpen(false);
   };
 
   return (
-    <nav className="navbar">
-      <h1 className="logo">My Portfolio</h1>
-      <ul className={`nav-links ${isMobile ? 'mobile' : ''}`}>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#services">Skills</a></li>
-        <li><a href="#testimonials">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div className="hamburger" onClick={toggleMenu}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </div>
-    </nav>
+    <>
+      <nav className="navbar">
+        <div className="logo">Portfolio</div>
+
+        {/* Hamburger Icon */}
+        <div className="hamburger" onClick={() => setMenuOpen(true)}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+
+        {/* Navigation Links */}
+        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+          {/* Close (X) Icon Inside Menu */}
+          <span className="close-icon" onClick={() => setMenuOpen(false)}>&times;</span>
+          
+          <li><a href="#" onClick={handleScrollToTop}>Home</a></li>
+          <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
+          <li><a href="#education" onClick={() => setMenuOpen(false)}>Education</a></li>
+          <li><a href="#services" onClick={() => setMenuOpen(false)}>Skills</a></li>
+          <li><a href="#testimonials" onClick={() => setMenuOpen(false)}>Projects</a></li>
+          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+        </ul>
+      </nav>
+    </>
   );
 };
 

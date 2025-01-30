@@ -1,91 +1,133 @@
+/* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Space between logo & hamburger */
+  justify-content: space-between;
   align-items: center;
-  background-color: #cce7ef;
-  padding: 0px 40px;
-  font-family: 'Arial', sans-serif;
-  color: #fff;
+  background-color: #0077B5; /* LinkedIn Blue */
+  padding: 15px 40px;
+  font-family: 'Helvetica Neue', sans-serif; /* Modern font */
+  color: #fff; /* White text for contrast */
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the logo */
+/* Logo Styling */
 .navbar .logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #744a7d;
-  text-transform: uppercase;
   font-style: italic;
-  margin-right: auto; /* Push the hamburger to the right */
+  color: #fff; /* White logo text */
 }
 
-/* Nav links styling */
+/* Desktop Navigation */
 .nav-links {
   display: flex;
   list-style: none;
 }
 
 .nav-links li {
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .nav-links a {
-  color: #744a7d;
+  color: #fff; /* White links */
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #18bf12; /* Green color on hover */
+  color: #00A0DC; /* LinkedIn secondary blue on hover */
 }
 
-/* Hamburger menu - aligned to the right */
+/* Hamburger Menu */
 .hamburger {
-  display: flex;
+  display: none;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
-  margin-left: auto; /* Push to right */
+  margin-left: auto;
 }
 
 .hamburger .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #744a7d;
+  width: 32px;
+  height: 4px;
+  background-color: #fff; /* White bars for the hamburger */
   border-radius: 5px;
+  transition: transform 0.3s ease;
 }
 
-/* Responsive design */
+/* Mobile Navigation */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 20px;
-  }
-
-  .nav-links {
-    display: none;  /* Hide menu by default */
-    flex-direction: column;
-    margin-top: 20px;
-    width: 100%;
-  }
-
-  .nav-links.mobile {
-    display: flex;  /* Show the menu when in mobile mode */
-  }
-
-  .nav-links li {
-    margin-left: 0;
-    margin-bottom: 15px;
-  }
-
-  .nav-links a {
-    font-size: 1.2rem;
-  }
-
   .hamburger {
     display: flex;
   }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%; /* Adjusted for mobile */
+    height: 100vh;
+    background: #0077B5; /* LinkedIn Blue */
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    transition: right 0.4s ease-in-out;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slight background on hover */
+  }
+
+  /* Close (X) Icon Inside the Menu (Mobile Only) */
+  .close-icon {
+    font-size: 2.5rem;
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    display: none; /* Hide close icon by default */
+  }
+
+  /* Show close icon only when menu is active */
+  .nav-links.active .close-icon {
+    display: block; /* Only display close icon when the menu is active */
+  }
+}
+
+/* Hide Close Icon in Desktop View */
+@media (min-width: 769px) {
+  .close-icon {
+    display: none; /* Ensure close icon is hidden on desktop */
+  }
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
 }

@@ -4,7 +4,7 @@ import './Testimonials.css';
 const Testimonials = () => {
   return (
     <section id="testimonials" className="testimonials">
-      <h2>My Projects</h2>
+      <h2>Projects</h2>
       <div className="testimonial-cards">
         <div className="testimonial-card">
           <h4>E-Commerce Website</h4>
