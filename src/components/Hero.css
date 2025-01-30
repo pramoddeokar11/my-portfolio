@@ -98,7 +98,7 @@
   .hero-image {
     width: 200px; /* Set width for mobile */
     height: 200px; /* Equal height for perfect roundness */
-    margin-top: 50px; /* Remove any top margin */
+    margin-top: 20px; /* Remove any top margin */
     margin-bottom: 15px; /* Space between image and content */
     border-radius: 50%;
     border: 5px solid #fff;
@@ -111,13 +111,12 @@
   }
 
   .hero-content h2 {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    font-size: 1.0rem; /* Adjust font size for smaller screens */
   }
 
   .hero-content h3 {
-    font-size: 1.8rem;
-    margin-top: 45%;
-    margin-left: 10%;
+    font-size: 1.5rem;
+    margin-top: 60%;
   }
 
   .hero-content p {
@@ -129,6 +128,6 @@
   .hero-content .btn {
     padding: 12px 25px;
     font-size: 1.1rem;
-    margin-left: 28%; 
+    margin-left: 17%; 
   }
 }

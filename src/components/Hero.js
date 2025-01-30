@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h3>Pramod Dattatray Deokar.</h3>
+        <h3>Pramod Dattatray Deokar</h3>
         <h2>A Passionate Full-Stack Developer</h2>
         <p>
           I specialize in building modern, responsive, and scalable web applications from scratch.
