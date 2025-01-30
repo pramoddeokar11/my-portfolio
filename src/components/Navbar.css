@@ -15,7 +15,7 @@
 
 /* Logo Styling */
 .navbar .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   font-style: italic;
   color: #fff; /* White logo text */
@@ -47,7 +47,7 @@
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   cursor: pointer;
   margin-left: auto;
 }
